@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pokeball.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAWAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T07:21:13.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-24T07:58:00.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Pokemons.cs",
-              "DocumentMoniker": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokemons.cs",
-              "RelativeDocumentMoniker": "Pokemons.cs",
-              "ToolTip": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokemons.cs",
-              "RelativeToolTip": "Pokemons.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "DocumentIndex": 0,
+              "Title": "Pokeball.cs",
+              "DocumentMoniker": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokeball.cs",
+              "RelativeDocumentMoniker": "Pokeball.cs",
+              "ToolTip": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\Pokeball.cs",
+              "RelativeToolTip": "Pokeball.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T07:20:42.449Z",
+              "WhenOpened": "2024-04-24T07:25:41.356Z",
               "EditorCaption": ""
             }
           ]
