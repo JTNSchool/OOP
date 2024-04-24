@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C1981EEE-BAFC-4601-8F69-01F513C0136C}|PokemonWorld1.csproj|c:\\leerjaar 2\\oop\\pokemon\\pokemonworld1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1981EEE-BAFC-4601-8F69-01F513C0136C}|PokemonWorld1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C1981EEE-BAFC-4601-8F69-01F513C0136C}|PokemonWorld1.csproj|c:\\leerjaar 2\\oop\\pokemon\\pokemonworld1\\pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C1981EEE-BAFC-4601-8F69-01F513C0136C}|PokemonWorld1.csproj|solutionrelative:pokemons.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pokemons.cs",
+              "DocumentMoniker": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld1\\Pokemons.cs",
+              "RelativeDocumentMoniker": "Pokemons.cs",
+              "ToolTip": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld1\\Pokemons.cs",
+              "RelativeToolTip": "Pokemons.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBsAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T11:40:34.02Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld1\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld1\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwA8AAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-22T11:36:08.958Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

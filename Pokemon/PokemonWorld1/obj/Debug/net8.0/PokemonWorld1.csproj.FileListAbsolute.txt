@@ -1,0 +1,14 @@
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\bin\Debug\net8.0\PokemonWorld1.exe
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\bin\Debug\net8.0\PokemonWorld1.deps.json
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\bin\Debug\net8.0\PokemonWorld1.runtimeconfig.json
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\bin\Debug\net8.0\PokemonWorld1.dll
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\bin\Debug\net8.0\PokemonWorld1.pdb
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.AssemblyInfoInputs.cache
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.AssemblyInfo.cs
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.csproj.CoreCompileInputs.cache
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.dll
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\refint\PokemonWorld1.dll
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.pdb
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\PokemonWorld1.genruntimeconfig.cache
+C:\Leerjaar 2\OOP\Pokemon\PokemonWorld1\obj\Debug\net8.0\ref\PokemonWorld1.dll
