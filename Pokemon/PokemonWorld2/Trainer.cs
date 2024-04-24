@@ -4,19 +4,20 @@ namespace PokemonWorld
 {
 	public class Trainer
 	{
-		private string Name;
-		private string[] Pokemons;
+		public readonly string Name;
+		public readonly List<dynamic> Pokemons;
 
 		public Trainer(string Username, string[] PokemonList)
         {
             Name = Username;
-            Pokemons = PokemonList;
+            Pokemons = CreatePokemonList(PokemonList);
         }
 
-        public List<Object> CreatePokemonList(string[] PokemonList)
+        public static List<object> CreatePokemonList(string[] PokemonList)
             {
-            List<object> NewPokemonList = new List<object>();
-            foreach (string Pokemon in PokemonList) 
+            var NewPokemonList = new List<object>();
+            if (PokemonList.Length > 6 ) { throw new Exception("You can only maximum amount of 6 pokemons"); }
+            foreach (string Pokemon in PokemonList)
             {
                 switch (Pokemon)
                 {
@@ -24,15 +25,12 @@ namespace PokemonWorld
                         NewPokemonList.Add(new Charmander());
                         break;
                 }
-           
-
             }
-
-
            return NewPokemonList;
         }
         public void SendOutPokemon(int index)
         {
+            //Iets moet fout gaan zodat ik kan catchen
 
         }
 

@@ -4,12 +4,12 @@ namespace PokemonWorld
 {
 	public class PokeBall
 	{
-		private string? PokemonInPokeball;
+		public object? PokemonInPokeball;
         private bool IsOutsideOfPokeBall = false;
 
 		//public PokeBall() { }
 
-		public void CatchPokemon(string Pokemon)
+		public void CatchPokemon(object Pokemon)
 		{
 			if (this.PokemonInPokeball == null)
 			{

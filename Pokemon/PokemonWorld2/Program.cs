@@ -5,31 +5,31 @@ namespace PokemonWorld
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            var StarterPokemon = new Charmander();
-            //The player gives a name to a charmander.
-            StarterPokemon.ChangeName();
-            //The charmander does its battle cry for ten times.
-            for (int i = 0; i < 10; i++)
-            {
-                StarterPokemon.BattleCry();
-            }
-
-            //Infinite loop until user closes console
             while (true)
             {
-                //The player can give a new name to the same charmander.
-                StarterPokemon.ChangeName();
-                //The charmander does its battle cry for ten times.
-                for (int i = 0; i < 10; i++)
+                //Ask the user if he wants to play
+                if (!Functions.AskYesOrNoQuestion("Do you want to play?")) { break; }
+
+                //Create 2 trainers
+                var TrainerPokemons = new string[] { "Charmander", "Charmander", "Charmander", "Charmander", "Charmander", "Charmander" };
+
+                var Trainer1Name = Functions.AskString("what is the name of the Trainer 1");
+                var Trainer1 = new Trainer(Trainer1Name, TrainerPokemons);
+
+                var Trainer2Name = Functions.AskString("what is the name of the Trainer 2");
+                var Trainer2 = new Trainer(Trainer2Name, TrainerPokemons);
+
+
+                
+                for (int i = 0; i < TrainerPokemons.Length; i++) { }
                 {
-                    StarterPokemon.BattleCry();
+                    Console.WriteLine(Pokemon.Name);
                 }
+
+
             }
-
-
-
         }
     }
 }

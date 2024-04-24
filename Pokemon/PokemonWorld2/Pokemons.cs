@@ -9,8 +9,8 @@ namespace PokemonWorld
 {
     class Charmander
     {
-        private string Name;
-        private string Type;
+        public string Name;
+        public readonly string Type;
 
         //Creation of a object
         public Charmander()
