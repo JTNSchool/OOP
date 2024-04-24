@@ -9,8 +9,8 @@ namespace PokemonWorld
 {
     class Charmander
     {
-        public string Name;
-        public string Type;
+        private string Name;
+        private string Type;
 
         //Creation of a object
         public Charmander()
@@ -28,7 +28,7 @@ namespace PokemonWorld
         //Changees the name of the Pokemon
         public void ChangeName()
         {
-            string Name = "";
+            string? Name = "";
             while (string.IsNullOrEmpty(Name))
             {
                 Console.WriteLine("What is the name of your Charmander?");
