@@ -5,33 +5,41 @@ namespace PokemonWorld
 	public class Trainer
 	{
 		public readonly string Name;
-		public readonly List<dynamic> Pokemons;
+		private readonly List<PokeBall> Belt;
 
-		public Trainer(string Username, string[] PokemonList)
+		public Trainer(string Username)
         {
             Name = Username;
-            Pokemons = CreatePokemonList(PokemonList);
-        }
-
-        public static List<object> CreatePokemonList(string[] PokemonList)
+            Belt = [new(new Charmander()), new(new Charmander()), new(new Charmander()) , new(new Charmander()), new(new Charmander()), new(new Charmander())];
+            foreach (PokeBall pokeball in Belt)
             {
-            var NewPokemonList = new List<object>();
-            if (PokemonList.Length > 6 ) { throw new Exception("You can only maximum amount of 6 pokemons"); }
-            foreach (string Pokemon in PokemonList)
-            {
-                switch (Pokemon)
-                {
-                    case "Charmander":
-                        NewPokemonList.Add(new Charmander());
-                        break;
-                }
+                pokeball.PokemonInPokeball.Name = $"{Username}'s Charmander";
             }
-           return NewPokemonList;
         }
-        public void SendOutPokemon(int index)
-        {
-            //Iets moet fout gaan zodat ik kan catchen
 
+        public void RetrievePokemon(int index)
+        {
+            Belt[index].RetrievePokemon();
+        }
+
+        private Charmander? SendOutPokemon(int index)
+        {
+            if (this.Belt.Count <= index) { throw new Exception(); }
+            return Belt[index].ThrowPokeball();
+        }
+
+        public Charmander? TrySendOutPokemon(int index)
+        {
+            try
+            {
+                return SendOutPokemon(index);
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Index out of range for sending out a Pokemon");
+                return null;
+            }
+ 
         }
 
         

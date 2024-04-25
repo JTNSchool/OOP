@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PokemonWorld
 {
-    class Charmander
+    public class Charmander
     {
         public string Name;
         public readonly string Type;

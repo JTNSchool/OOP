@@ -13,21 +13,29 @@ namespace PokemonWorld
                 if (!Functions.AskYesOrNoQuestion("Do you want to play?")) { break; }
 
                 //Create 2 trainers
-                var TrainerPokemons = new string[] { "Charmander", "Charmander", "Charmander", "Charmander", "Charmander", "Charmander" };
-
                 var Trainer1Name = Functions.AskString("what is the name of the Trainer 1");
-                var Trainer1 = new Trainer(Trainer1Name, TrainerPokemons);
+                var Trainer1 = new Trainer(Trainer1Name);
 
                 var Trainer2Name = Functions.AskString("what is the name of the Trainer 2");
-                var Trainer2 = new Trainer(Trainer2Name, TrainerPokemons);
+                var Trainer2 = new Trainer(Trainer2Name);
+
+                for (int i = 0; i < 10; i++) 
+                { 
+                    Charmander? Trainer1charmander = Trainer1.TrySendOutPokemon(i);
+                    if (Trainer1charmander == null) { break; }
+                    Trainer1charmander.BattleCry();
+
+                    Charmander? Trainer2charmander = Trainer2.TrySendOutPokemon(i);
+                    if (Trainer2charmander == null) { break; }
+                    Trainer2charmander.BattleCry();
+
+                    Trainer1.RetrievePokemon(i);
+                    Trainer2.RetrievePokemon(i);
 
 
-                
-                for (int i = 0; i < TrainerPokemons.Length; i++) { }
-                {
-                    Console.WriteLine(Pokemon.Name);
+
+
                 }
-
 
             }
         }

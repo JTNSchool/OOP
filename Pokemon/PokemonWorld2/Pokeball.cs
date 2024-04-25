@@ -4,36 +4,30 @@ namespace PokemonWorld
 {
 	public class PokeBall
 	{
-		public object? PokemonInPokeball;
+		public Charmander PokemonInPokeball;
         private bool IsOutsideOfPokeBall = false;
 
-		//public PokeBall() { }
+		public PokeBall(Charmander charmander) { PokemonInPokeball = charmander; }
 
-		public void CatchPokemon(object Pokemon)
-		{
-			if (this.PokemonInPokeball == null)
-			{
-				PokemonInPokeball = Pokemon;
-                Console.WriteLine($"You Catched a {Pokemon}");
-			}
-			else
-			{ Console.WriteLine("You already have a pokemon in this pokeball"); }
-		}
-
-		public void ThrowPokeball()
+		public Charmander? ThrowPokeball()
 		{
 			if (this.PokemonInPokeball != null)
 			{
 				if (!this.IsOutsideOfPokeBall)
 				{
 					this.IsOutsideOfPokeBall = true;
-                    Console.WriteLine($"You threw your pokeball and {this.PokemonInPokeball} came out");
+                    Console.WriteLine($"{this.PokemonInPokeball.Name} came out");
 				}
 				else
 				{ Console.WriteLine("Your pokemon is already outside the pokeball"); }
-			}
+				return PokemonInPokeball;
+            }
 			else
-			{ Console.WriteLine("You dont have a pokemon in this pokeball"); }
+			{ 
+				Console.WriteLine("You dont have a pokemon in this pokeball");
+				return null;
+
+			}
 		}
 
 		public void RetrievePokemon()
@@ -43,7 +37,7 @@ namespace PokemonWorld
                 if (this.IsOutsideOfPokeBall)
                 {
                     this.IsOutsideOfPokeBall = false;
-                    Console.WriteLine($"You retrieved your {this.PokemonInPokeball}");
+                    Console.WriteLine($"{this.PokemonInPokeball.Name} went back to the pokeball");
                 }
                 else
                 { Console.WriteLine("Your pokemon is already inside of the pokeball"); }
