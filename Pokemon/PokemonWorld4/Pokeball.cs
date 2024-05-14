@@ -13,6 +13,8 @@ namespace PokemonWorld
 		{
 			if (this.PokemonInPokeball != null)
 			{
+				if (this.PokemonInPokeball.Status != "Alive") {return null; }
+
 				if (!this.IsOutsideOfPokeBall)
 				{
 					this.IsOutsideOfPokeBall = true;

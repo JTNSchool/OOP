@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\PokemonWorld.csproj",
+      "projectUniqueName": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2Old\\PokemonWorld.csproj",
       "projectName": "PokemonWorld",
-      "projectPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\PokemonWorld.csproj",
+      "projectPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2Old\\PokemonWorld.csproj",
       "packagesPath": "C:\\Users\\tjbos\\.nuget\\packages\\",
-      "outputPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2\\obj\\",
+      "outputPath": "C:\\Leerjaar 2\\OOP\\Pokemon\\PokemonWorld2Old\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\tjbos\\AppData\\Roaming\\NuGet\\NuGet.Config",
