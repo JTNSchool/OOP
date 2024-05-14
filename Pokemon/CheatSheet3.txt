@@ -1,0 +1,9 @@
+What is inheritance?
+super class has subclasses 
+
+Why do we use inheritance?
+to chopdown the project in smaller pieces
+
+How do we use inheritance in our code?
+now we have entities called Pokemons
+and subclasses of that are charmander etc

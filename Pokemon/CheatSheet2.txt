@@ -1,0 +1,9 @@
+What is compostion?
+variables inside of a class
+
+Why do we use composition?
+to store information or other objects inside a class
+
+How do we use composition in our code?
+create a variable inside of a class
+and then you can use it 
