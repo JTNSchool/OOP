@@ -5,7 +5,7 @@ namespace PokemonWorld
 	public class PokeBall
 	{
 		public Pokemon PokemonInPokeball;
-        private bool IsOutsideOfPokeBall = false;
+        public bool IsOutsideOfPokeBall = false;
 
 		public PokeBall(Pokemon pokemon) { PokemonInPokeball = pokemon; }
 

@@ -19,6 +19,10 @@ namespace PokemonWorld
         static PokeBall? WinnerOfLastRound;
         static Trainer? TrainerWinnerOfLastRound;
 
+        //Deze 2 moeten gemaakt worden maar 1 keer
+        static PokeBall? PokemonOfTrainer1;
+        static PokeBall? PokemonOfTrainer2;
+
         //Creation of a object
 
         public static void SetTrainers(Trainer t1, Trainer t2)
@@ -34,61 +38,110 @@ namespace PokemonWorld
             int Loops = Trainer1.Belt.Count;
             if (Trainer2.Belt.Count >= Trainer1.Belt.Count) { Loops = Trainer2.Belt.Count; }
 
-            for (int Round = 1; Round <= Loops; Round++)
+            bool KeepPlaying = true;
+            while (KeepPlaying)
             {
-                PlayRound(Round);
-            }
+                CurrentBattleRounds++;
+
+               var Winstate = PlayRound(CurrentBattleRounds);
+               
+               switch (Winstate)
+                {
+                    case (false, false):
+                        break;
+                    case (true, true): // draw
+                        Console.WriteLine("It is a draw!");
+                        KeepPlaying = false;
+                        break;
+                    case (true, false): // plr 1 win
+                        Console.WriteLine($"{Trainer1.Name} wins!");
+                        KeepPlaying = false;
+                        break;
+                    case (false, true): // plr 2 win
+                        Console.WriteLine($"{Trainer2.Name} wins!");
+                        KeepPlaying = false;
+                        break;
+                }
+               Console.ReadLine();
+            }    
         }
 
 
-        private static void PlayRound(int Round)
+        private static (bool, bool) PlayRound(int CurrentBattleRounds)
         {
-            
+
             Console.WriteLine();
-            Console.WriteLine($"Round {Round}");
+            Console.WriteLine($"Round {CurrentBattleRounds}");
 
-            PokeBall PokemonOfTrainer1 = CurrentBattle.GetRandomPokeball(Trainer1); ;
-            PokeBall PokemonOfTrainer2 = CurrentBattle.GetRandomPokeball(Trainer2); ;
+            bool Trainer1defeated = false;
+            bool Trainer2defeated = false;
+            
 
-            if (TrainerWinnerOfLastRound != Trainer1) 
+            if (TrainerWinnerOfLastRound != Trainer1)
             {
                 PokemonOfTrainer1 = CurrentBattle.GetRandomPokeball(Trainer1);
-                PokemonOfTrainer1.ThrowPokeball();
+                if (PokemonOfTrainer1 == null) { Trainer1defeated = true; }
+
+                else { PokemonOfTrainer1.ThrowPokeball(); }
+                
             }
-            else
+            else if (PokemonOfTrainer1 != null)
             {
                 Console.WriteLine($"{PokemonOfTrainer1.PokemonInPokeball.Name} Is still standing!");
             }
             if (TrainerWinnerOfLastRound != Trainer2)
             {
                 PokemonOfTrainer2 = CurrentBattle.GetRandomPokeball(Trainer2);
-                PokemonOfTrainer2.ThrowPokeball();
+                if (PokemonOfTrainer2 == null) { Trainer2defeated = true; }
+                
+                else { PokemonOfTrainer2.ThrowPokeball(); }
             }
-            else
+            else if (PokemonOfTrainer2 != null)
             {
                 Console.WriteLine($"{PokemonOfTrainer2.PokemonInPokeball.Name} Is still standing!");
             }
 
+            if (Trainer1defeated || Trainer2defeated)
+            {
+                return (Trainer1defeated, Trainer2defeated);
+            }
+
 
             // 0=Draw | 1=Pokemon1 won | 2= Pokemon2 won | 3= error
+            if (PokemonOfTrainer1 == null || PokemonOfTrainer2 == null) { throw new Exception(); }
+
+            Console.WriteLine($"{PokemonOfTrainer1.PokemonInPokeball.Name} vs {PokemonOfTrainer2.PokemonInPokeball.Name}");
+
             int Winner = CurrentBattle.GetWinner(PokemonOfTrainer1.PokemonInPokeball, PokemonOfTrainer2.PokemonInPokeball);
             
             switch (Winner)
             {
                 case 0:
                     Console.WriteLine("It is a draw!");
-                    if (CurrentBattleRounds == 1)
+                    if (CurrentBattleRounds == 1 || WinnerOfLastRound == null)
                     {
                         Battle.DefeatPokemon(PokemonOfTrainer1);
                         Battle.DefeatPokemon(PokemonOfTrainer2);
+                        WinnerOfLastRound = null;
+                        TrainerWinnerOfLastRound = null;
                     }
                     else 
                     { 
                         if (WinnerOfLastRound != null) 
                         { 
                             Battle.DefeatPokemon(WinnerOfLastRound);
-                            WinnerOfLastRound = null;
-                            TrainerWinnerOfLastRound = null;
+
+                            if (WinnerOfLastRound == PokemonOfTrainer1)
+                            {
+                                WinnerOfLastRound = PokemonOfTrainer2;
+                                TrainerWinnerOfLastRound = Trainer2;
+                            }
+                            else if (WinnerOfLastRound == PokemonOfTrainer2)
+                            {
+                                WinnerOfLastRound = PokemonOfTrainer1;
+                                TrainerWinnerOfLastRound = Trainer1;
+                            }
+                            
                         } 
                     }
                 
@@ -126,10 +179,8 @@ namespace PokemonWorld
                     }
                     break;
             }
-
-
+        return (false, false);
         }
-
 
 
 

@@ -22,7 +22,7 @@ namespace PokemonWorld
         }
 
 
-        public PokeBall GetRandomPokeball(Trainer trainer)
+        public PokeBall? GetRandomPokeball(Trainer trainer)
         {
             //Check if all pokemons are unable to fight
             List<PokeBall> AvailablePokemons = [];
@@ -35,9 +35,8 @@ namespace PokemonWorld
             }
 
             //return -1 if out of pokemons
-            if (AvailablePokemons.Count <= 0) { Console.WriteLine($"{trainer.Name} Is out of Pokemons"); new Exception(); }
+            if (AvailablePokemons.Count <= 0) { Console.WriteLine($"{trainer.Name} Is out of Pokemons"); return null; }
 
-            
             PokeBall RandomPokeball = AvailablePokemons[ random.Next(0, AvailablePokemons.Count-1) ];
             return RandomPokeball;
         }

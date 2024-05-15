@@ -1,0 +1,9 @@
+What are static variables and methods?
+if they are static they are not used by the object but with the class itself
+
+Why do we use static variables and methods?
+to save and reuse data in the arena
+
+
+How do we use static variables and methods in our code?
+to save and reuse data in the arena
