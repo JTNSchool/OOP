@@ -1,0 +1,9 @@
+What is encapsulation?
+Securing your code by making classes and variable readable instead of changeable or completely hidden by private or secured
+
+Why do we use encapsulation?
+to protect the code/application from outsiders and other people you dont want messing with the code
+
+
+How do we use encapsulation in our code?
+by making sensitive readonly and classes that are sensitive also secured or private
