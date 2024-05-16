@@ -7,8 +7,8 @@ namespace PokemonWorld
     {
         static void Main()
         {
-            Trainer Trainer1 = new Trainer("Henk");
-            Trainer Trainer2 = new Trainer("Jan");
+            Trainer Trainer1 = new("Henk");
+            Trainer Trainer2 = new("Jan");
 
             Arena.SetTrainers(Trainer1, Trainer2);
 

@@ -12,10 +12,9 @@ namespace PokemonWorld
     {
         //Static belong class not object Arena. <Object>
         static int CurrentBattleRounds;
-        static int Battles;
-        static Trainer Trainer1;
-        static Trainer Trainer2;
-        static Battle CurrentBattle;
+        static Trainer? Trainer1;
+        static Trainer? Trainer2;
+        static Battle? CurrentBattle;
         static PokeBall? WinnerOfLastRound;
         static Trainer? TrainerWinnerOfLastRound;
 
@@ -33,10 +32,9 @@ namespace PokemonWorld
 
         public static void StartBattle()
         {
-            CurrentBattle = new Battle(Trainer1, Trainer2);
+            if (Trainer1 == null || Trainer2 == null) { return; }
+            CurrentBattle = new Battle();
 
-            int Loops = Trainer1.Belt.Count;
-            if (Trainer2.Belt.Count >= Trainer1.Belt.Count) { Loops = Trainer2.Belt.Count; }
 
             bool KeepPlaying = true;
             while (KeepPlaying)
@@ -79,7 +77,8 @@ namespace PokemonWorld
 
             if (TrainerWinnerOfLastRound != Trainer1)
             {
-                PokemonOfTrainer1 = CurrentBattle.GetRandomPokeball(Trainer1);
+                if (CurrentBattle == null || Trainer1 == null) { return (false, false);  }
+                PokemonOfTrainer1 = Battle.GetRandomPokeball(Trainer1);
                 if (PokemonOfTrainer1 == null) { Trainer1defeated = true; }
 
                 else { PokemonOfTrainer1.ThrowPokeball(); }
@@ -91,7 +90,8 @@ namespace PokemonWorld
             }
             if (TrainerWinnerOfLastRound != Trainer2)
             {
-                PokemonOfTrainer2 = CurrentBattle.GetRandomPokeball(Trainer2);
+                if (CurrentBattle == null ||  Trainer2 == null) { return (false, false);  }
+                PokemonOfTrainer2 = Battle.GetRandomPokeball(Trainer2);
                 if (PokemonOfTrainer2 == null) { Trainer2defeated = true; }
                 
                 else { PokemonOfTrainer2.ThrowPokeball(); }
@@ -112,7 +112,9 @@ namespace PokemonWorld
 
             Console.WriteLine($"{PokemonOfTrainer1.PokemonInPokeball.Name} vs {PokemonOfTrainer2.PokemonInPokeball.Name}");
 
-            int Winner = CurrentBattle.GetWinner(PokemonOfTrainer1.PokemonInPokeball, PokemonOfTrainer2.PokemonInPokeball);
+            if (CurrentBattle == null) { return (false, false); }
+
+            int Winner = Battle.GetWinner(PokemonOfTrainer1.PokemonInPokeball, PokemonOfTrainer2.PokemonInPokeball);
             
             switch (Winner)
             {

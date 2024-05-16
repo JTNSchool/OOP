@@ -2,7 +2,7 @@
 
 namespace PokemonWorld
 {
-	sealed class PokeBall
+	public sealed class PokeBall
 	{
 		public readonly Pokemon PokemonInPokeball;
         private bool IsOutsideOfPokeBall = false;
